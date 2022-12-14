@@ -34,8 +34,9 @@
                 <div class="row">
                     <div class="col-12">
                         <ul>
-                            <li v-for="(task, index) in tasksList" :class="task.done ? 'text-decoration-line-through' : '' ">
+                            <li v-for="(task, index) in tasksList" :class="task.done ? 'text-decoration-line-through' : '' " class="d-flex justify-content-between">
                                 {{task.text}}
+                                <span><i class="fa-solid fa-xmark" @click="removeTask(task)"></i></span>
                             </li>
                         </ul>
                     </div>
