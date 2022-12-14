@@ -24,8 +24,8 @@
                 <div class="row text-center">
                     <div class="col-12">
                         <h2>TO DO LIST</h2>
-                        <input type="text" id="myInput" placeholder="Add task">
-                        <button>Add</button>
+                        <input type="text" id="myInput" placeholder="Add task" v-model="newTask">
+                        <button @click="addNewTask(newTask)">Add</button>
                     </div>
                 </div>
             </header>

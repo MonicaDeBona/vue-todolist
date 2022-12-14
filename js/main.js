@@ -19,6 +19,8 @@ const {createApp} = Vue;
 createApp({
     data(){
         return{
+            newTask : '',
+
             tasksList : [
                 {
                     text : "Reply to emails",
@@ -54,6 +56,19 @@ createApp({
             if(taskIndex > -1) {
                 this.tasksList.splice(taskIndex, 1);
             }
+        },
+
+        addNewTask(taskToAdd) {
+            if (taskToAdd != '' && taskToAdd.length < 2) {
+                this.tasksList.push(taskToAdd);
+                this.clearUserInput();
+            } else {
+
+            }
+        },
+
+        clearUserInput() {
+            this.newTask = '';
         }
     }
 }).mount("#app")
