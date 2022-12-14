@@ -22,33 +22,35 @@ createApp({
             tasksList : [
                 {
                     text : "Reply to emails",
-                    done : false,
+                    done : false
                 },
                 {
                     text : "Work on code",
-                    done : true,
+                    done : true
                 },
                 {
                     text : "Call vet",
-                    done : true,
+                    done : true
                 },
                 {
                     text : "Get lunch",
-                    done : false,
+                    done : false
                 },
                 {
                     text : "Call mom",
-                    done : true,
+                    done : true
                 },
                 {
                     text : "Go to Japan",
-                    done : false,
+                    done : false
                 },
             ]
         }
     },
 
     methods: {
-        
+        addTask(){
+
+        }
     }
-})
+}).mount("#app")

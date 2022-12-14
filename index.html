@@ -19,27 +19,29 @@
 
     <body>
 
-        <header class="container py-5">
-            <div class="row text-center">
-                <div class="col-12">
-                    <h2>TO DO LIST</h2>
-                    <input type="text" id="myInput" placeholder="Add task">
-                    <button>Add</button>
+        <div id="app">
+            <header class="container py-5">
+                <div class="row text-center">
+                    <div class="col-12">
+                        <h2>TO DO LIST</h2>
+                        <input type="text" id="myInput" placeholder="Add task">
+                        <button>Add</button>
+                    </div>
                 </div>
-            </div>
-        </header>
-        
-        <main class="container">
-            <div class="row">
-                <div class="col-12">
-                    <ul>
-                        <li>
-        
-                        </li>
-                    </ul>
+            </header>
+            
+            <main class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <ul>
+                            <li v-for="(task, index) in tasksList" :class="task.done ? 'text-decoration-line-through' : '' ">
+                                {{task.text}}
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </main>
+            </main>
+        </div>
 
         <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
         <script src="./js/main.js"></script>
