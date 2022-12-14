@@ -59,11 +59,11 @@ createApp({
         },
 
         addNewTask(taskToAdd) {
-            if (taskToAdd != '' && taskToAdd.length < 2) {
-                this.tasksList.push(taskToAdd);
+            if (taskToAdd != '' && taskToAdd.length > 2) {
+                this.tasksList.push({text: taskToAdd, done: false});
                 this.clearUserInput();
             } else {
-
+                console.warn('Syntax error');
             }
         },
 
